@@ -70,7 +70,6 @@ console.log(email.trim()) // elimina espacios
 console.log(email.trimStart()) // solo comienzo
 console.log(email.trimEnd()) // solo final
 
- */
 
 // # Fragmentación
 
@@ -80,5 +79,24 @@ console.log(message.substring(0,10)) // solo para str, un solo param es el inici
 console.log(message.slice(0,10)) // arrays también
 
 console.log(message.replace(/[aeiou]/g, "p")) //la primera, replaceAll para todas 
-// expresión regular /[]/g
+// expresión regular /[]/g -> la letra g si hay espacios, para que sea global, sino sin g
+
+
+// # Relleno de string
+
+const message = "Riwi - "
+document.write(message)
+
+//repetir, limite 10millones
+console.log(message.repeat(4))
+
+//para que tenga un num de caracteres, rellena comienzo o final
+console.log(message.padEnd(10,"."))
+console.log(message.padStart(10,"."))
+
+ */
+// # Destrucción 
+
+const message = "En RIWI todos somos una familia"
+console.table(message.split(" ")); // sin parametro lo vuelve array, 2 parametros: separador y limite
 
